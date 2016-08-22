@@ -29,7 +29,7 @@ public class sample3_servlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		sample_DAO dao = new sample_DAO();
-		dao.update();
+		dao.update("1");
 		List<sample1_beans> list = dao.findAll();
 			request.setAttribute("list", list);
 			request.getRequestDispatcher("sample1_jsp.jsp").forward(request,response);

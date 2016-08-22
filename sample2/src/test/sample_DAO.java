@@ -15,10 +15,10 @@ public class sample_DAO {
 			throw new IllegalStateException(e);
 		}
 	}
-	public int update() {
-		String sql = "UPDATE bihin SET status = 2";
+	public int update(String numb) {
+		String sql = "UPDATE bihin SET status = 1 WHERE id = ";
 		try {
-			return DBManager3.simpleUpdate(sql);
+			return DBManager3.simpleUpdate(sql+numb);
 		}
 		catch (SQLException e) {
 			throw new IllegalStateException(e);
